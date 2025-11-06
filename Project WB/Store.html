@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>King Nassar Shop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+      /* Styling khusus untuk halaman Store */
+      *{
+       margin:0;
+        padding: 0;
+        box-sizing:border-box;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        header{
+        position: fixed;
+        top: 0;
+        width: 100%;
+        padding: 1.2rem 9%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.6);
+        filter:drop-shadow(10px);
+        border-bottom: 2px dashed #ffa45c;
+        z-index: 1000;
+        backdrop-filter: blur(8px);
+        } 
+
+        header .fas fa-music{
+        display:block;
+        font-size: 3rem;
+        color:darkmagenta;
+        cursor: pointer;
+        border-radius: 5rem;
+        padding: 0.2rem 0.6rem;
+        }
+
+        .logo{
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 2rem;
+        color: #e8296e;
+        cursor: pointer;
+        transition: 0.3s;
+        }
+
+        .logo:hover{
+        transform: scale(1.05);
+        color: #e85a4f;
+        }
+
+        nav a{
+        color: #333;
+        margin-left: 2rem;
+        text-decoration: none;
+        font-weight: 500; 
+        transition: 0.3s ease;  
+
+        }
+
+        nav a:hover, nav a.active{
+        color: #ff6600;
+        border-bottom: 2px solid #ff6600;
+        }
+      .store-section {
+        padding-top: 8rem;
+        text-align: center;
+      }
+
+      .search-bar {
+        margin: 3rem auto;
+      }
+
+      .search-bar input {
+        width: 60%;
+        padding: 14px;
+        font-size: 1.1em;
+        border-radius: 30px;
+        border: 2px solid #d91e63;
+        background: rgba(236, 34, 236, 0.067);
+        color: #333;
+        outline: none;
+        transition: 0.3s;
+      }
+
+      .search-bar input:focus {
+        box-shadow: 0 0 15px #ff6600;
+        background: #fff;
+      }
+
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        padding: 30px;
+      }
+
+      .product {
+        background:rgba(236, 34, 236, 0.067);;
+        border: 2px solid #ffa45c;
+        border-radius: 20px;
+        width: 250px;
+        text-align: center;
+        padding: 25px;
+        transition: all 0.3s ease;
+        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+      }
+
+      .product:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 40px rgba(217, 30, 99, 0.3);
+      }
+
+      .product img {
+        width: 100%;
+        border-radius: 15px;
+      }
+
+      .product h3 {
+        margin-top: 15px;
+        font-size: 1.3em;
+        color: #d91e63;
+      }
+
+      .product p {
+        font-weight: bold;
+        color: #ff6600;
+      }
+
+      .product button {
+        margin-top: 10px;
+        background: #d91e63;
+        color: white;
+        font-size: 1em;
+        border: none;
+        padding: 10px 18px;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .product button:hover {
+        transform: scale(1.05);
+        background: #ff6600;
+      }
+
+      .checkout-form {
+        max-width: 500px;
+        margin: 70px auto;
+        background: rgba(236, 34, 236, 0.067);
+        padding: 40px;
+        border-radius: 20px;
+        border: 2px dashed #ffa45c;
+        box-shadow: 0 5px 25px rgba(217, 30, 99, 0.15);
+      }
+
+      .checkout-form h2 {
+        text-align: center;
+        color: #d91e63;
+        font-size: 2em;
+        margin-bottom: 20px;
+      }
+
+      .checkout-form input,
+      .checkout-form button {
+        width: 100%;
+        padding: 14px;
+        margin: 12px 0;
+        border-radius: 10px;
+        border: 2px solid #ffa45c;
+        background: rgba(255, 255, 255, 0.8);
+        color: #333;
+        font-size: 1.05em;
+        outline: none;
+        transition: 0.3s;
+      }
+
+      .checkout-form input:focus {
+        background: #fff;
+        box-shadow: 0 0 10px #ff6600;
+      }
+
+      .checkout-form button {
+        background: #d91e63;
+        border: none;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .checkout-form button:hover {
+        transform: scale(1.05);
+        background: #ff6600;
+      }
+            
+      footer {
+        background: #d91e63;
+        color: white;
+        text-align: center;
+        padding: 2rem;
+        margin-top: 4rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">
+        <i class="fas fa-music"></i>
+        <span>King Nassar</span>
+      </div>
+
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="About.html">About</a>
+        <a href="Album3.html">Album</a>
+        <a href="" class="active">Store</a>
+        <a href="More.html">More</a>
+        <a href="Sign_up.html">Sign up</a>
+      </nav>
+    </header>
+
+    <section class="store-section">
+      <h1 style="color:#d91e63; font-size:3rem; margin-bottom:1rem;">King Nassar Shop</h1>
+
+      <div class="search-bar">
+        <input type="text" placeholder="Cari produk dangdut favoritmu... 🎶" />
+      </div>
+
+      <div class="container">
+        <div class="product">
+          <img src="baju nasar.jpg" alt="Baju Nassar" />
+          <h3>Nassar Shirt</h3>
+          <p>Rp100.000</p>
+          <button>Tambah ke Keranjang</button>
+        </div>
+
+        <div class="product">
+          <img src="gantungan kunci nassar.jpg" alt="Gantungan Kunci" />
+          <h3>Key Chain</h3>
+          <p>Rp15.000</p>
+          <button>Tambah ke Keranjang</button>
+        </div>
+
+        <div class="product">
+          <img src="casing hp nassar.jpg" alt="Phone Case" />
+          <h3>Phone Case</h3>
+          <p>Rp50.000</p>
+          <button>Tambah ke Keranjang</button>
+        </div>
+
+        <div class="product">
+          <img src="pin nasar.jpg" alt="Pin Nassar" />
+          <h3>Nassar Pin</h3>
+          <p>Rp20.000</p>
+          <button>Tambah ke Keranjang</button>
+        </div>
+
+        <div class="product">
+          <img src="PC Nassar.jpg" alt="PC Nassar" />
+          <h3>Nassar PC</h3>
+          <p>Rp200.000</p>
+          <button>Tambah ke Keranjang</button>
+        </div>
+
+        <div class="product">
+          <img src="lighstick nassar.jpg" alt="Lightstick" />
+          <h3>Nassar Lightstick</h3>
+          <p>Rp300.000</p>
+          <button>Tambah ke Keranjang</button>
+        </div>
+      </div>
+
+      <div class="checkout-form">
+        <h2>Formulir Checkout</h2>
+        <form action="#" method="POST">
+          <input type="text" name="name" placeholder="Nama Lengkap" required />
+          <input type="email" name="email" placeholder="Email" required />
+          <input type="text" name="address" placeholder="Alamat Pengiriman" required />
+          <input type="tel" name="phone" placeholder="Nomor Telepon" required />
+          <button type="submit">Proses Pembayaran</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>© 2025 King Nassar Shop | Dangdut Never Dies 🎤✨</footer>
+  </body>
+</html>

@@ -1,0 +1,198 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+
+body {
+  background: linear-gradient(135deg, rgba(245, 124, 124, 0.6), hsl(27, 76%, 80%));
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: bgMove 10s infinite alternate ease-in-out;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1.2rem 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.6);
+    filter:drop-shadow(10px);
+    border-bottom: 2px dashed #ffa45c;
+    z-index: 1000;
+    backdrop-filter: blur(8px);
+}
+
+header .fas fa-music{
+    display:block;
+    font-size: 3rem;
+    color:darkmagenta;
+    cursor: pointer;
+    border-radius: 5rem;
+    padding: 0.2rem 0.6rem;
+}
+
+.logo{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2rem;
+    color: #e8296e;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.logo:hover{
+    transform: scale(1.05);
+    color: #e85a4f;
+}
+
+nav a{
+    color: #333;
+    margin-left: 2rem;
+    text-decoration: none;
+    font-weight: 500; 
+    transition: 0.3s ease;  
+
+}
+
+nav a:hover, nav a.active{
+    color: #ff6600;
+    border-bottom: 2px solid #ff6600;
+}
+@keyframes bgMove {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+.login-container {
+  background: rgba(255, 213, 0, 0.167);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  padding: 40px 35px;
+  width: 350px;
+  color:  #333;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+}
+
+.login-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 22px;
+  letter-spacing: 0.5px;
+}
+
+.logo{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2rem;
+    color: #e8296e;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.logo:hover{
+    transform: scale(1.05);
+    color: #e85a4f;
+}
+
+nav a{
+    color: #333;
+    margin-left: 2rem;
+    text-decoration: none;
+    font-weight: 500; 
+    transition: 0.3s ease;  
+
+}
+
+nav a:hover, nav a.active{
+    color: #ff6600;
+    border-bottom: 2px solid #ff6600;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 14px;
+  margin-bottom: 6px;
+  color:  #333;
+}
+
+input[type="text"],
+input[type="password"] {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background: rgba(255,255,255,0.2);
+  color: #333;
+  margin-bottom: 16px;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  background: rgba(255,255,255,0.3);
+  box-shadow: 0 0 10px rgba(255,255,255,0.4);
+}
+
+label input[type="checkbox"] {
+  margin-right: 6px;
+  accent-color: #484b4b;
+}
+
+button {
+  background: linear-gradient(135deg, #f18787, hsla(30, 86%, 61%, 0.769));
+  color: #000;
+  font-weight: bold;
+  border: none;
+  padding: 10px 0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+}
+
+p {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 13px;
+}
+
+a {
+  color: #293031;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #352f2f;
+  text-decoration: underline;
+}
+
+@media (max-width: 400px) {
+  .login-container {
+    width: 90%;
+    padding: 30px 20px;
+  }
+}

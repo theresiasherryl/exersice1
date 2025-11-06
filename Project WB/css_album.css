@@ -1,0 +1,42 @@
+*{
+    margin:0;
+    padding: 25x;
+    box-sizing:border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    background: 
+    linear-gradient(135deg, rgba(217, 30, 99, 0.05) 0%, rgba(255, 111, 0, 0.05) 100%),
+    linear-gradient(to bottom, #ffffff 0%, #f8f9fa 50%, #fff5f7 100%);
+   background-position: center;
+   background-size: 100% 100%, cover;
+   min-height: 100vh;
+   background-attachment: fixed;
+   color: #f5f5f5;
+   line-height: 1.6;
+   overflow-x: hidden;
+}
+
+.AlbumSong .box-container .box-btn .SONG {
+    margin-bottom: 267px;
+    margin-left: 20px;
+    height: 430px;
+    width: 275px;
+    align-items: strecth;
+    border-radius: 25px;
+    justify-content: center;
+    background-color: rgba(236, 34, 236, 0.067);
+    box-shadow: 0 12px 10px rgba(17, 0, 17, 0.3);
+    margin-right: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.AlbumSong .box-container .box-btn .SONG:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}

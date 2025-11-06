@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>More About King Nassar</title>
+  <link rel="stylesheet" href="styleMore.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+  <style>
+    
+  header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1.2rem 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.6);
+    filter:drop-shadow(10px);
+    border-bottom: 2px dashed #ffa45c;
+    z-index: 1000;
+    backdrop-filter: blur(8px);
+  }
+
+  header .fas fa-music{
+    display:block;
+    font-size: 3rem;
+    color:darkmagenta;
+    cursor: pointer;
+    border-radius: 5rem;
+    padding: 0.2rem 0.6rem;
+  }
+    .more-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 3rem;
+      padding: 9rem 3rem 4rem;
+    }
+
+    .spotify-card {
+      width: 280px;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .spotify-card:hover { transform: scale(1.04); }
+    .spotify-card img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+    }
+
+    .spotify-card h3 {
+      font-size: 1.2rem;
+      color: #d91e63;
+      margin: 0.8rem 0 0.3rem;
+    }
+
+    .spotify-card p {
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 1rem;
+      padding: 0 0.8rem;
+    }
+
+    .spotify-link {
+      display: inline-block;
+      background: #1DB954;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: bold;
+      text-decoration: none;
+      margin-bottom: 1rem;
+      transition: background 0.3s;
+    }
+
+    .spotify-link:hover { background: #14863e; }
+
+    .more-content {
+      max-width: 720px;
+      text-align: left;
+    }
+
+    .news-article {
+      margin-bottom: 2.5rem;
+      background: rgba(236, 34, 236, 0.067);
+      border-radius: 16px;
+      padding: 1.8rem 2rem;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+    }
+
+    .news-article h2 {
+      color: #d91e63;
+      margin-bottom: 0.6rem;
+    }
+
+    .news-article p {
+      color: #555;
+      line-height: 1.7;
+      font-size: 1rem;
+    }
+
+    .news-date {
+      color: #999;
+      font-size: 0.85rem;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .social-links {
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .social-links a {
+      color: #d91e63;
+      font-size: 1.5rem;
+      margin: 0 10px;
+      transition: color 0.3s;
+    }
+
+    .social-links a:hover {
+      color: #ff9500;
+    }
+
+    @media (max-width: 992px) {
+      .more-wrapper {
+        flex-direction: column;
+        align-items: center;
+        padding: 7rem 2rem;
+      }
+      .spotify-card { width: 80%; }
+      .more-content { text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <i class="fas fa-music"></i>
+      <span> King Nassar</span>
+    </div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="About.html">About</a>
+      <a href="Album.html">Album</a>
+      <a href="Store.html">Store</a>
+      <a href="More.html" class="active">More</a>
+      <a href="Sign_up.html">Sign Up</a>
+    </nav>
+  </header>
+
+  <!-- MAIN SECTION -->
+  <section class="more-wrapper">
+
+    <!-- LEFT CONTENT -->
+    <div class="more-content">
+      <h1 style="font-size:2.8rem; color:#d91e63; font-weight:bold; margin-bottom:2rem;">
+        More About King Nassar
+      </h1>
+
+      <div class="news-article">
+        <h2>King Nassar Announces Upcoming Single “Cinta Tak Pernah Salah”</h2>
+        <span class="news-date">October 18, 2025</span>
+        <p>
+          Dangdut star King Nassar has officially revealed his next single titled <em>“Cinta Tak Pernah Salah”</em>,
+          set to release in early November. The song is said to blend classic dangdut with modern pop sounds,
+          and was co-produced with young Indonesian hitmaker Andi Rianto.
+        </p>
+      </div>
+
+      <div class="news-article">
+        <h2>Rumor: King Nassar Might Collaborate with Ayu Ting Ting</h2>
+        <span class="news-date">October 15, 2025</span>
+        <p>
+          Social media is buzzing with speculation about a collaboration between King Nassar and Ayu Ting Ting
+          after the two were spotted recording together at a Jakarta studio. Neither artist has confirmed
+          the rumor, but fans are excited about what could be the next viral duet in dangdut music.
+        </p>
+      </div>
+
+      <div class="news-article">
+        <h2>King Nassar’s Concert Tour 2025 Confirmed</h2>
+        <span class="news-date">October 10, 2025</span>
+        <p>
+          After a long hiatus from touring, King Nassar is set to headline a national concert series starting
+          December 2025. The “Dangdut for the Soul Tour” will visit major cities including Jakarta, Surabaya,
+          and Medan, with exclusive meet-and-greet events for fans.
+        </p>
+      </div>
+
+      <div class="news-article">
+        <h2>Viral Moment: King Nassar’s Emotional Interview</h2>
+        <span class="news-date">October 7, 2025</span>
+        <p>
+          A recent TV interview featuring King Nassar became viral after he opened up about his journey in
+          the dangdut industry and his struggles balancing fame and personal life. Fans praised his honesty
+          and emotional strength, making #RespectForNassar trend on social media.
+        </p>
+      </div>
+
+      <!-- Social Media Links -->
+      <div class="social-links">
+        <h2 style="color:#d91e63; margin-bottom:1rem;">Follow King Nassar</h2>
+        <a href="https://www.instagram.com/kingnassar88/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://open.spotify.com/artist/5fg1QXm82SjLgF5Ltlze3w" target="_blank"><i class="fab fa-spotify"></i></a>
+        <a href="https://www.youtube.com/@KingNassar88" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.tiktok.com/@kingnassarofficial" target="_blank"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+
+    <!-- RIGHT SPOTIFY CARD -->
+    <div class="spotify-card">
+      <img src="nassar.jpg" alt="King Nassar - Samira" />
+      <h3>Seperti Mati Lampu</h3>
+      <p>King Nassar’s timeless hit — now streaming on Spotify.</p>
+      <a href="https://open.spotify.com/track/7Eqp8Zjr2fP7Z1FrVQwRt8" target="_blank" class="spotify-link">
+        Listen on Spotify
+      </a>
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p>© 2025 King Nassar | Made with love by Dangdut Lovers</p>
+    </div>
+  </footer>
+</body>
+</html>

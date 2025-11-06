@@ -1,0 +1,275 @@
+/* ====== King Nassar Artist Page (Final Palette Version) ====== */
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #ffffff, #ffeae6);
+  color: #2b2b2b;
+  margin: 0;
+  padding: 0;
+}
+
+
+header{
+    position: fixed;
+    top: 0;
+    width: 80%;
+    padding: 1.2rem 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.6);
+    filter:drop-shadow(10px);
+    border-bottom: 2px dashed #ffa45c;
+    z-index: 1000;
+    backdrop-filter: blur(8px);
+}
+
+header .fas fa-music{
+    display:block;
+    font-size: 3rem;
+    color:darkmagenta;
+    cursor: pointer;
+    border-radius: 5rem;
+    padding: 0.2rem 0.6rem;
+}
+
+/* ====== Navigation Bar ====== */
+
+nav a{
+    color: #333;
+    margin-left: 2rem;
+    text-decoration: none;
+    font-weight: 500; 
+    transition: 0.3s ease;  
+
+}
+
+nav a:hover, nav a.active{
+    color: #ff6600;
+    border-bottom: 2px solid #ff6600;
+}
+.navbar {
+  background: linear-gradient(90deg, #e8296e, #e85a4f, #ff6600);
+  padding: 15px 0;
+  box-shadow: 0 4px 10px rgba(232, 90, 79, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 2rem;
+  color: #e8296e;
+  cursor: pointer;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+  color: #e85a4f;
+}
+
+.logo i {
+  color: darkmagenta;
+  font-size: 2rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s, transform 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #ffeae6;
+  transform: scale(1.1);
+}
+
+/* Responsif navbar */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+  }
+}
+
+
+/* Container utama */
+.artist-profile {
+  max-width: 1000px;
+  margin: 50px auto;
+  background: rgba(236, 34, 236, 0.067);
+;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 8px 25px rgba(232, 90, 79, 0.2);
+}
+
+/* Judul utama */
+.artist-profile h1 {
+  text-align: center;
+  font-size: 2.8em;
+  background: linear-gradient(90deg, #e8296e, #e85a4f, #ff6600);
+  background-clip: text; /* Tambahan agar kompatibel di semua browser */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  margin-bottom: 35px;
+}
+
+/* Layout dua kolom */
+.artist-main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/* Foto artis */
+.artist-photo {
+  position: relative;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 6px solid #e8296e;
+  box-shadow: 0 6px 25px rgba(232, 41, 110, 0.4);
+}
+
+.artist-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Hilangkan lingkaran spin */
+.vinyl {
+  display: none;
+}
+
+/* Informasi artis */
+.artist-info {
+  flex: 1;
+  min-width: 280px;
+  background: linear-gradient(145deg, #fff9f8, #ffffff);
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: inset 0 0 15px rgba(232, 90, 79, 0.1);
+}
+
+.artist-info h3 {
+  color: #e85a4f;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #ff6600;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.artist-info p {
+  margin: 6px 0;
+  font-size: 0.95em;
+  color: #3b3b3b;
+}
+
+/* Link */
+.artist-info a {
+  color: #e8296e;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.artist-info a:hover {
+  color: #ff6600;
+}
+
+/* Bagian tambahan */
+.artist-bio,
+.artist-awards,
+.artist-films {
+  margin-top: 35px;
+  background: #fff6f5;
+  border-radius: 16px;
+  padding: 25px 30px;
+  box-shadow: 0 4px 15px rgba(232, 90, 79, 0.25);
+}
+
+/* Subjudul tiap bagian */
+.artist-bio h2,
+.artist-awards h2,
+.artist-films h2 {
+  color: #e8296e;
+  border-left: 6px solid #ff6600;
+  padding-left: 10px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+/* Isi teks */
+.artist-bio p,
+.artist-awards li,
+.artist-films li {
+  line-height: 1.6;
+  font-size: 0.96em;
+  color: #333;
+}
+
+/* Daftar */
+.artist-awards ul,
+.artist-films ul {
+  list-style: none;
+  padding: 0;
+}
+
+.artist-awards li::before,
+.artist-films li::before {
+  content: "★ ";
+  color: #ff6600;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .artist-main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .artist-info {
+    text-align: center;
+  }
+
+  .artist-photo {
+    width: 240px;
+    height: 240px;
+  }
+}
